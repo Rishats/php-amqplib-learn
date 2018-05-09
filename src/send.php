@@ -5,7 +5,7 @@ use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
 $host = '192.168.8.99';
-$port = 8080;
+$port = 5672;
 $user = 'guest';
 $pass = 'guest';
 
