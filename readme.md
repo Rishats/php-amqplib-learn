@@ -30,7 +30,18 @@ username: guest
 pwd: guest
 ```
 
-5. Configure src files. 
+5. Clone project. 
+```
+git clone git@github.com:Rishats/php-amqplib-learn.git rabbit.test
+```
+
+6. Install dependency. 
+```
+cd rabbit.test
+composer install
+```
+
+7. Configure src files. 
 ```
 If you run your server on your local machine you should use 127.0.0.1 ^)
 I use 192.168.8.99 because i have my own home server ^). 
