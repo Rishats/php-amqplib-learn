@@ -1,6 +1,6 @@
 # Simple work with RabbitMQ via PHP
 
-![](https://avatars0.githubusercontent.com/u/96669?s=200&v=4) + ![](https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png)
+![](https://avatars0.githubusercontent.com/u/96669?s=200&v=4)
 
 
 
