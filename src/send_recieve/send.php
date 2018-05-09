@@ -1,6 +1,6 @@
 <?php
 
-require_once '../vendor/autoload.php';
+require_once '../../vendor/autoload.php';
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
@@ -12,20 +12,12 @@ $pass = 'guest';
 $connection = new AMQPStreamConnection($host, $port, $user, $pass);
 $channel = $connection->channel();
 
-
 $channel->queue_declare('hello', false, false, false, false);
 
-echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
+$msg = new AMQPMessage('Hello World!');
+$channel->basic_publish($msg, '', 'hello');
 
-$callback = function($msg) {
-  echo " [x] Received ", $msg->body, "\n";
-};
-
-$channel->basic_consume('hello', '', false, true, false, false, $callback);
-
-while(count($channel->callbacks)) {
-    $channel->wait();
-}
+echo " [x] Sent 'Hello World!'\n";
 
 $channel->close();
 $connection->close();
